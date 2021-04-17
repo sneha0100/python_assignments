@@ -1,0 +1,64 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "other-metallic",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please enter a string Snehal\n",
+      "[('S', 1), ('n', 1), ('e', 1), ('h', 1), ('a', 1), ('l', 1)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import operator\n",
+    "W= input('Please enter a string ')\n",
+    "def most_frequent(string):\n",
+    "    d = dict()\n",
+    "    for key in string:\n",
+    "        if key not in d:\n",
+    "            d[key] = 1\n",
+    "        else:\n",
+    "            d[key] += 1\n",
+    "   \n",
+    "    cd = sorted(d.items(),key=operator.itemgetter(1),reverse=True)\n",
+    "    return cd\n",
+    "print (most_frequent(W))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "center-reverse",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
